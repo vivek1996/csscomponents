@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.h1 {
+  font-size: 2.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: rgb(29, 151, 207);
+  color: #fff;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in;
+}
+.btn:hover {
+  background: rgb(19, 145, 145);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.backdrop {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+.modal {
+  display: none;
+  border: 1px solid rgb(204, 199, 199);
+  border-radius: 0.3rem;
+  padding: 10px;
+  position: fixed;
+  background: white;
+  width: 260px;
+  top: 100px;
+  left: calc(50% - 140px);
+  z-index: 1;
+}
+.modal__head {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.divider {
+  border-color: rgb(191, 189, 194);
+}
+.modal__footer {
+  text-align: end;
+}
+.modal__footer a {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+.modal__footer a:hover {
+  color: red;
+}
+@media (min-width: 400px) {
+  .modal {
+    width: 360px;
+    left: calc(50% - 190px);
+  }
+}

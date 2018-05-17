@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
+body {
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+.header {
+  background: rgb(26, 141, 131);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 5px 20px;
+}
+.navbar__title {
+  font-size: 1.5rem;
+}
+
+.desktop__navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.desktop__navigation div {
+  padding-left: 20px;
+  display: none;
+}
+.desktop__navigation div a{
+  text-decoration: none;
+  color: #fff;
+}
+.desktop__navigation div a:hover{
+  text-decoration: underline;
+  color: #000;
+}
+.mobile {
+  position: fixed;
+  top: 0;
+  background: rgba(90, 90, 90, 0.9);
+  width: 80vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 500ms ease-out;
+}
+
+.mobile__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+.mobile__items a{
+  text-decoration: none;
+  color: #fff;
+}
+.mobile__items a:hover{
+  text-decoration: underline;
+  color: rgb(20, 189, 152);
+}
+.open {
+  display: flex;
+  transform: translateX(0);
+}
+.ham__button {
+  float: left;
+}
+.desktop {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .ham__button {
+    display: none;
+  }
+
+  .desktop__navigation div {
+    display: block;
+  }
+  .desktop {
+    display: block;
+  }
+}
